@@ -1,0 +1,279 @@
+#####################################################################
+#            __  __                                                 #
+#           |  \/  |                                                #
+#           | \  / | ___  ___ ___  __ _  __ _  ___  ___             #
+#           | |\/| |/ _ \/ __/ __|/ _` |/ _` |/ _ \/ __|            #
+#           | |  | |  __/\__ \__ \ (_| | (_| |  __/\__ \            #
+#           |_|  |_|\___||___/___/\__,_|\__, |\___||___/            #
+#                                        __/ |                      #
+#                                       |___/                       #
+#####################################################################
+#
+#
+# This file allows you to edit MOST messages in the plugin, there are some messages you
+# cannot edit as they are hard coded into the plugin, if you really want those messages
+# to be editable (and if there is enough support for it) I will try and add it.
+# Please note that if there is ever an update to this file, like new message were added
+# we take the liberty to automatically add the value into this file BUT due to the way
+# Bukkit/Spigot save configuration files all of my 'helpful' comments are removed. So it
+# is recommended before updating to the newest version to backup your config and messages
+# file to save your work and to keep the comments.
+#
+# If you have questions you can post an issue on Github
+# (https://github.com/itsschatten/portablecraftinginvs/issues) Also helpful if you want to
+# see the code for the plugin.
+# You may also join my Discord support server (https://discord.gg/BmWrNam7Sp)
+
+# ------------------------------------------------------------------------------------- #
+#                                                                                       #
+#                                   Utility Messages                                    #
+#                                                                                       #
+# ------------------------------------------------------------------------------------- #
+
+# Edit the prefix for the entire plugin.
+prefix: "&7Portable Inventories &d\u00BB&f"
+
+# The message that is sent when someone doesn't have permission to execute a command.
+no-perms: "{prefix} &cI'm sorry you don't have permission to do that. &7({permission})"
+
+# This message supports scalar. Which means you can have a multiline message be sent.
+# I would suggest that you familiarize yourself with scalar to better use it then I can.
+help-message: |+
+  &7Required Arguments &a<> &7|| &7Optional Args &6[]
+  &7/pci or /pci &6[&7help&6] &7>&f Lists this help message.
+  &7/pci &6[&7rl &oor&7 reload&6] &7> &f Reload the configuration.
+  &7/pci &6[&7rl &oor&7 reload&6] &6[&7settings &oor&7 messages] &7>
+  &f Reload the specified config.
+  &7/pci &6[&7version &oor&7 ver&6] &7>&f Get the version of the plugin.
+  &7/enderchest &6[&7player&6] &7>&f Open your enderchest, and if specified the targets.
+  &7/craft &6[&7player&6] &7>&f Opens a workbench for you or another player.
+  &7/anvil &6[&7player&6] &7>&f Opens an anvil for you or another player.
+  &7/enchanttable &6[&7player&6] &7>
+  &f Opens an enchattable for you or another player. (Teir depends on surrouding bookshelves.)
+  &7/enderchest &6[&7player&6] &7>&f Open your enderchest or another players
+  &7/cartography &6[&7player&6] &7>&f Open a cartography table.
+  &7/grindstone &6[&7player&6] &7>&f Open a grindstone.
+  &7/loom &6[&7player&6] &7>&f Open a loom.
+  &7/stonecutter &6[&7player&6] &7>&f Open a stonecutter.
+
+  &7&oDeveloped by ItsSchatten on spigot.
+
+# The message that is sent if you disable a feature in the settings.yml.
+feature-disabled: "{prefix} That feature is disabled, sorry about that..."
+
+# The message that is sent to whomever reloaded the configs
+reload-message: "{prefix}&a The plugin has been reloaded."
+
+# The message that is sent to whomever reloaded the specified config.
+reload-message-specific: "{prefix}&a The file {file} was reloaded."
+
+# A message that is sent if an argument is incorrect for the command.
+wrong-args: "{prefix}&c You've added inappropriate arguments!"
+
+# The message that is sent when someone doesn't add arguments or doesn't add enough to complete a command.
+not-enough-args: "{prefix}&c Please add some more arguments, if you need more help use &7/pci&c."
+
+# This message is sent when someone adds TO many arguments that aren't needed, this really isn't that useful I just
+# added it in the event you want to use. (There is an option in the config to disable this.)
+too-many-args: "{prefix} &cYou've added too many arguments!"
+
+# This message is sent when something doesn't exist.
+doesnt-exist: "{prefix} &cSomething that you've entered doesn't exist."
+
+# This message is sent when a doesn't exist.
+player-doesnt-exist: "{prefix}&e {player}&c doesn't exist."
+
+# This message is sent when an update to the plugin is available. (In-game only)
+update-available: |+
+
+  &7There is an update for &dPortable Crafting Invs&7!
+  &7We recommened that you update to the latest version!
+  &bCurrent &e{currentVer} &bNew Version &e{newVer}&7.
+  &7Click the link to get it. &e{link}
+
+# ------------------------------------------------------------------------------------- #
+#                                                                                       #
+#                               Inventory Open Messages                                 #
+#                                                                                       #
+# ------------------------------------------------------------------------------------- #
+
+
+# This message is sent to a player when executing /enderchest command.
+opened-enderchest: "{prefix} エンダーチェストを開きました"
+
+# This message is sent to a player when opening another players enderchest.
+# This message has a fancy modifier that uses appropriate pluralisation to a players name.
+# To use it do {playerFormatted}
+open-target-enderchest-old: "{prefix} Opening {player} enderchest."
+
+# This message is sent when the setting 'old-enderchest' is false.
+open-target-enderchest: "{prefix} Opening {player} enderchest for {player}."
+
+# This message is sent when opening a crafting table using /craft.
+opened-craftingtable: "{prefix} 作業台を開きました"
+
+# This message is sent to the target of /craft <target> command.
+opened-craftingtable-other: "{prefix} Opened crafting table for &e{player}&r."
+
+# This message is sent when someone opens an anvil using /anvil.
+opened-anvil: "{prefix} 金床を開きました"
+
+# This message is sent to the target of the /anvil <target> command.
+opened-anvil-other: "{prefix} Opened anvil for {player}"
+
+# This message is sent when opening an enchant table using /enchanttable
+# (I don't plan to add an alias of /enchant for this command. This would cause issues with the regular /enchant command.)
+opened-enchanttable: "{prefix} エンチャントテーブルを開きました"
+
+# Sent when the player opens an enchant table with a defined max level.
+opened-enchanttable-with-max-level: "{prefix} 最大経験値レベル30でエンチャントテーブルを開きました"
+
+# Sent when the player passes a higher then the max defined in the settings when opening the enchant table.
+must-be-in-range: "{prefix} &c你(中国語であなたって意味だよ) must pass a number between &e{min}&c and &e{max}&c."
+
+# This message is sent to the target of /enchanttable <target> command.
+opened-enchanttable-other: "{prefix} Opened enchantment table for {player}."
+
+# The message that is sent if a player tries to take an item from their portable enderchest.
+cant-retrieve-from-enderchest: "{prefix} &cあなたのポータブルエンダーチェストからアイテムを取り出すことができませんでした!"
+
+# The message that is sent when opening the grindstone.
+opened-grindstone: "{prefix} 砥石を開きました."
+
+# The message that is sent when opening the grindstone for someone else.
+opened-grindstone-other: "{prefix} Opened the grindstone for {player}."
+
+# The message that is sent when opening the loom.
+opened-loom: "{prefix} 織機を開きました."
+
+# The message that is sent when opening the loom for someone else.
+opened-loom-other: "{prefix} Opened the loom for {player}."
+
+# The message that is sent when opening the cartography table.
+opened-cartography: "{prefix} 製図台を開きました"
+
+# The message that is sent when opening the cartography table for someone else.
+opened-cartography-other: "{prefix} Opened the cartography table for {player}."
+
+# The message that is sent when opening the stone cutter.
+opened-stonecutter: "{prefix} 石切台を開きました"
+
+# The message that is sent when opening the stone cutter for someone else.
+opened-stonecutter-other: "{prefix} Opened the stone cutter for {player}."
+
+# The message that is sent when opening the smithing table.
+opened-smithing-table: "{prefix} 鍛冶(←これ氵ちゃうからな!!冫やで!!)台を開きました"
+
+# The message that is sent when opening the smithing table for someone else.
+opened-smithing-table-other: "{prefix} Opened the smithing table for {player}."
+
+# The message that is sent when opening the furnace.
+opened-brewing: "{prefix} 仮想の醸造台を開きました"
+
+# The message that is sent when opening the furnace for someone else.
+opened-brewing-other: "{prefix} Opened virtual brewing stand for {player}."
+
+# The message that is sent when opening the furnace.
+opened-furnace: "{prefix} 仮想のかまどを開きました"
+
+# The message that is sent when opening the furnace for someone else.
+opened-furnace-other: "{prefix} Opened virtual furnace for {player}."
+
+# The message that is sent when opening the blast furnace.
+opened-blast-furnace: "{prefix} 仮想の溶鉱炉を開きました"
+
+# The message that is sent when opening the blast furnace for someone else.
+opened-blast-furnace-other: "{prefix} Opened virtual blast furnace for {player}."
+
+# The message that is sent when opening the smoker.
+opened-smoker: "{prefix} 仮想の燻製器を開きました"
+
+# The message that is sent when opening the smoker for someone else.
+opened-smoker-other: "{prefix} Opened virtual smoker for {player}."
+
+# ------------------------------------------------------------------------------------- #
+#                                                                                       #
+#                                       Sign Messages                                   #
+#                                                                                       #
+# ------------------------------------------------------------------------------------- #
+
+# This is what is sent to the player if they try to break without shift clicking.
+shift-click-to-break-sign: "{prefix}&c スニークをせずにこの看板を破壊することはできません"
+
+# This is what the sign text will turn to when creating the anvil sign.
+anvil-sign: "&3[金床]"
+
+# This is what the sign text will turn to when creating the cartography sign.
+cartography-sign: "&3[製図台]"
+
+# This is what the sign text will turn to when creating the crafting sign.
+crafting-sign: "&3[作業台]"
+
+# This is what the sign text will turn to when creating the enchantment table sign.
+enchant-table-sign: "&3[エンチャントテーブル]"
+
+# This is what the sign text will turn to when creating the enderchest sign.
+enderchest-sign: "&3[エンダーチェスト]"
+
+# This is what the sign text will turn to when creating the grindstone sign.
+grindstone-sign: "&3[砥石]"
+
+# This is what the sign text will turn to when creating the loom sign.
+loom-sign: "&3[織機]"
+
+# This is what the sign text will turn to when creating the stonecutter sign.
+stonecutter-sign: "&3[石切台]"
+
+# This is what the sign text will turn to when creating the blast furnace sign.
+blast-furnace-sign: "&3[溶鉱炉]"
+
+# This is what the sign text will turn to when creating the brewing sign.
+brewing-sign: "&3[醸造台]"
+
+# This is what the sign text will turn to when creating the furnace sign.
+furnace-sign: "&3[かまど]"
+
+# This is what the sign text will turn to when creating the smoker sign.
+smoker-sign: "&3[燻製器]"
+
+# This is what the sign text will turn to when creating the smithing table sign.
+smithing-sign: "&3[鍛冶台]"
+
+# This is what is sent to the player to confirm the creation of the anvil sign.
+anvil-sign-created: "{prefix} 金床の看板を作成しました."
+
+# This is what is sent to the player to confirm the creation of the cartography sign.
+cartography-sign-created: "{prefix} 製図台の看板を作成しましt"
+
+# This is what is sent to the player to confirm the creation of the crafting sign.
+crafting-sign-created: "{prefix} 作業台の看板を作成しました"
+
+# This is what is sent to the player to confirm the creation of the enchantment table sign.
+enchant-table-sign-created: "{prefix} エンチャントテーブルの看板を作成しました"
+
+# This is what is sent to the player to confirm the creation of the enderchest sign.
+enderchest-sign-created: "{prefix} エンダーチェストの看板を作成しました"
+
+# This is what is sent to the player to confirm the creation of the grindstone sign.
+grindstone-sign-created: "{prefix} 砥石の看板を作成しました"
+
+# This is what is sent to the player to confirm the creation of the loom sign.
+loom-sign-created: "{prefix} 織機の看板を作成しました"
+
+# This is what is sent to the player to confirm the creation of the stonecutter sign.
+stonecutter-sign-created: "{prefix} 石切台の看板を作成しました"
+
+# This is what is sent to the player to confirm the creation of the smithing table sign.
+smithing-sign-created: "{prefix} 鍛冶(←冫だからな!!)代"
+
+# This is what is sent to the player to confirm the creation of a blast furnace sign.
+blast-furnace-sign-created: "{prefix} 溶鉱炉の看板を作成しました"
+
+# This is what is sent to the player to confirm the creation of a brewing stand sign.
+brewing-sign-created: "{prefix} 醸造台の看板を作成しました"
+
+# This is what is sent to the player to confirm the creation of a furnace sign.
+furnace-sign-created: "{prefix} かまどの看板を作成しました"
+
+# This is what is sent to the player to confirm the creation of a smoker sign.
+smoker-sign-created: "{prefix} 燻製器の看板を作成しました"
